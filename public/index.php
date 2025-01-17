@@ -1,6 +1,6 @@
 <?php
-require_once 'includes/session.php';
-require_once 'includes/db.php';
+require_once '../includes/session.php';
+require_once '../includes/db.php';
 
 $flashMessages = getFlashMessages();
 $loadedSettings = $_SESSION['loaded_settings'] ?? null;
