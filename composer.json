@@ -3,7 +3,6 @@
     "description": "Opis",
     "require": {
       "php": "^7.4 || ^8.0"
-      "ext-pdo_sqlite": "*"
     }
     }
   }
