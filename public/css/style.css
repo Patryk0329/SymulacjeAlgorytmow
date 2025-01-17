@@ -1,0 +1,181 @@
+/* Ogólne style strony */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Nagłówek */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Flash messages */
+.flash-messages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.flash-message {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Kontener symulacji */
+#simulation {
+    margin-top: 30px;
+}
+
+#visualizer {
+    border: 2px solid #3498db;
+    background-color: #ecf0f1;
+}
+
+/* Form Controls */
+#algorithm-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#algorithm-controls label {
+    font-size: 1.2em;
+}
+
+#algorithm-controls select,
+#algorithm-controls button {
+    font-size: 1em;
+    padding: 10px;
+}
+
+#runAlgorithm, #resetGraph, #saveSettingsForm button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#runAlgorithm:hover, #resetGraph:hover, #saveSettingsForm button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+/* Style dla wierzchołków */
+.node {
+    fill: #3498db;
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.node.visited {
+    fill: #2ecc71; /* Zielony dla odwiedzonych */
+}
+
+.node.current {
+    fill: #e74c3c; /* Czerwony dla aktualnego wierzchołka */
+}
+
+.path {
+    stroke: #f39c12; /* Żółty dla ścieżki */
+    stroke-width: 4;
+}
+
+/* Style dla przycisków i opcji wyboru w formularzu */
+select, button {
+    font-size: 1em;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+select:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 3px rgba(52, 152, 219, 0.6);
+}
+
+/* Style dla listy odwiedzonych wierzchołków */
+#visitOrderList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.visit-order-item {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#graph-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    border: 2px solid #3498db;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumbnail:hover {
+    border-color: #2980b9;
+}
